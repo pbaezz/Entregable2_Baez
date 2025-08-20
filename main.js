@@ -92,16 +92,16 @@ const productos = [
 let todosLosProductos = "";
 let sosMenor = "";
 
-// let botonAceptar = document.getElementById("aceptar");
-// botonAceptar.addEventListener("click", () => {
-//   let edadUser = document.getElementById("edad");
-//   let edad = parseInt(edadUser.value);
-//   if (edad >= 18) {
-//     renderProducts();
-//   } else {
-//     menor();
-//   }
-// });
+let botonAceptar = document.getElementById("aceptar");
+botonAceptar.addEventListener("click", () => {
+let edadUser = document.getElementById("edad");
+let edad = parseInt(edadUser.value);
+if (edad >= 18) {
+renderProducts();
+} else {
+menor();
+}
+});
 
 const renderProducts = () => {
   let containerProd = document.getElementById("products");
@@ -122,7 +122,7 @@ const renderProducts = () => {
   containerProd.innerHTML = todosLosProductos;
 };
 
-renderProducts();
+
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const agregarAlCarrito = (id) => {
