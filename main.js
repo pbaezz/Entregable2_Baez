@@ -137,8 +137,6 @@ const agregarAlCarrito = (id) => {
 
   if (yaExiste) {
   } else {
-    let precioTotal = (prodEncontrado.precio *= valor);
-    prodEncontrado.precioTotal = precioTotal;
     prodEncontrado.cantidad = valor;
     carrito.push(prodEncontrado);
   }
